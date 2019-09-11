@@ -1,0 +1,11 @@
+{
+  "camera": {
+    "Address": "172.17.150.101",
+    "FrameRate": 10,
+    "Quality": 100
+  },
+  "Path": {
+    "logPath": "files/logs",
+    "finalPackage": "files/final-package"
+  }
+}

@@ -1,0 +1,33 @@
+.gm-content-outer {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  max-width: 100vw;
+  padding-top: 64px;
+  min-height: calc(100vh - 64px);
+  overflow-x: hidden;
+  padding-bottom: 64px;
+}
+.gm-content-outer.top {
+  align-items: flex-start;
+}
+
+.gm-content-inner {
+  width: 95%;
+  max-width: 1200px;
+}
+
+@media only screen and (max-width: 768px) {
+  .gm-content-outer {
+    align-items: flex-start;
+  }
+  .gm-content-inner {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-height: 500px) {
+  .gm-content-outer {
+    align-items: flex-start;
+  }
+}
