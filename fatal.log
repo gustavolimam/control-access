@@ -1,6 +1,0 @@
-[11-09-2019 14:24:52.47250] [LOG] Arquivo de log não existente. Erro na inserção do log. Log service: MAIN Mensagem: [Erro ao carregar configurações:  mkdir : no such file or directory]
-[11-09-2019 14:24:52.47283] [MAIN] [Erro ao carregar configurações:  mkdir : no such file or directory]
-[11-09-2019 14:24:52.47303] [LOG] Nao foi possivel enviar log via FTP (sem arquivo de log)
-[11-09-2019 14:25:13.03154] [LOG] Arquivo de log não existente. Erro na inserção do log. Log service: MAIN Mensagem: [Erro ao carregar configurações:  mkdir /Logs: permission denied]
-[11-09-2019 14:25:13.03202] [MAIN] [Erro ao carregar configurações:  mkdir /Logs: permission denied]
-[11-09-2019 14:25:13.03218] [LOG] Nao foi possivel enviar log via FTP (sem arquivo de log)

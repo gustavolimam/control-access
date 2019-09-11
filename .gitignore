@@ -5,3 +5,5 @@
 /src/go.opencensus.io
 /src/golang.org
 /src/google.golang.org
+
+*.log
