@@ -1,13 +1,14 @@
-import React, { Component } from "react";
-import AppBar from "@material-ui/core/AppBar";
-import Toolbar from "@material-ui/core/Toolbar";
-import Logo from "../assets/logoFacens.jpg";
-import Button from "@material-ui/core/Button";
-import Drawer from "@material-ui/core/Drawer";
-import List from "@material-ui/core/List";
-import ListItem from "@material-ui/core/ListItem";
-import ListItemText from "@material-ui/core/ListItemText";
-import { Grid, Typography } from "@material-ui/core";
+import React, { Component } from 'react';
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
+import Logo from '../assets/logoFacens.jpg';
+import Button from '@material-ui/core/Button';
+import Drawer from '@material-ui/core/Drawer';
+import List from '@material-ui/core/List';
+import ListItem from '@material-ui/core/ListItem';
+import ListItemText from '@material-ui/core/ListItemText';
+import { Grid, Typography } from '@material-ui/core';
+import { Link } from 'react-router-dom';
 
 class AppHeader extends Component {
   state = {
@@ -24,13 +25,27 @@ class AppHeader extends Component {
   };
 
   render() {
+    const menu = [
+      {
+        name: 'Página Inicial',
+        url: '/'
+      },
+      {
+        name: 'Câmeras',
+        url: '/cameras'
+      },
+      {
+        name: 'Base de Usuários',
+        url: '/users'
+      }
+    ];
     // Define a lista de diretórios possiveis na página web do Dashboard
     const menuList = (
       <div className={styles.list}>
         <List>
-          {["Página Inicial", "Câmeras", "Base de Usuários"].map(text => (
-            <ListItem button key={text}>
-              <ListItemText primary={text} />
+          {menu.map(text => (
+            <ListItem button component={Link} to={text.url} key={text.name}>
+              <ListItemText primary={text.name} />
             </ListItem>
           ))}
         </List>
@@ -42,7 +57,7 @@ class AppHeader extends Component {
         <Toolbar style={styles.toolBar}>
           <img alt="Logo" src={Logo} width="80" />
           <Grid container justify="flex-end">
-            <Button onClick={this.toggleDrawer("right", true)}>
+            <Button onClick={this.toggleDrawer('right', true)}>
               <Typography variant="h6" style={styles.textBar}>
                 Controle de Acesso
               </Typography>
@@ -50,13 +65,13 @@ class AppHeader extends Component {
             <Drawer
               anchor="right"
               open={this.state.right}
-              onClose={this.toggleDrawer("right", false)}
+              onClose={this.toggleDrawer('right', false)}
             >
               <div
                 tabIndex={0}
                 role="button"
-                onClick={this.toggleDrawer("right", false)}
-                onKeyDown={this.toggleDrawer("right", false)}
+                onClick={this.toggleDrawer('right', false)}
+                onKeyDown={this.toggleDrawer('right', false)}
               >
                 {menuList}
               </div>
@@ -70,11 +85,11 @@ class AppHeader extends Component {
 
 const styles = {
   toolBar: {
-    backgroundColor: "#00AEEF"
+    backgroundColor: '#00AEEF'
   },
   textBar: {
-    color: "white",
-    fontWeight: "bold"
+    color: 'white',
+    fontWeight: 'bold'
   },
   list: {
     width: 250

@@ -1,25 +1,25 @@
-import React, { Component } from "react";
-import { Typography, Grid, Paper, Card } from "@material-ui/core";
-import { PieChart, Pie, Cell, Legend } from "recharts";
+import React, { Component } from 'react';
+import { Typography, Grid, Paper, Card } from '@material-ui/core';
+import { PieChart, Pie, Cell, Legend } from 'recharts';
 // import { info } from "../../services/firebase";
 
-import ContentWrapper from "../../components/content-wrapper";
-import TablesEvent from "../../components/tables";
+import ContentWrapper from '../../components/content-wrapper';
+import TablesEvent from '../../components/tables';
 
 // console.log(info);
 
 // Constantes para testes do gráfico, futuramente será o retorno de uma API
 const data0 = [
-  { name: "Livres", value: 800 },
-  { name: "Ocupadas", value: 200 }
+  { name: 'Livres', value: 800 },
+  { name: 'Ocupadas', value: 200 }
 ];
 const data1 = [
-  { name: "Livres", value: 300 },
-  { name: "Ocupadas", value: 700 }
+  { name: 'Livres', value: 300 },
+  { name: 'Ocupadas', value: 700 }
 ];
 
 // Constante que define os padrões de cores utilizados nos gráficos do dashboard
-const COLORS = ["#00AEEF", "#EB060D"];
+const COLORS = ['#00AEEF', '#EB060D'];
 
 class Home extends Component {
   render() {
@@ -27,6 +27,11 @@ class Home extends Component {
       <ContentWrapper align="top">
         <Paper style={{ padding: 24 }}>
           <Grid container xs={12} spacing={24}>
+            <Grid container xs={12} justify="center">
+              <Typography variant="h4" style={styles.textList}>
+                Página Inicial
+              </Typography>
+            </Grid>
             <Grid item xs={6}>
               <Card>
                 <Typography style={styles.textCard} variant="h6">
@@ -111,11 +116,14 @@ class Home extends Component {
 
 const styles = {
   textCard: {
-    fontWeight: "bold",
-    textAlign: "center"
+    fontWeight: 'bold',
+    textAlign: 'center'
   },
   textLegend: {
-    fontWeight: "bold"
+    fontWeight: 'bold'
+  },
+  textList: {
+    fontWeight: 'bold'
   }
 };
 
